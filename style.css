@@ -1,0 +1,83 @@
+body {
+    background-color: #ecf0f1;
+}
+
+.photo {
+    border:1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    height:345px;
+    width:345px;
+    transition: .2s all ease-in;
+}
+
+.photos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+}
+
+
+.expandPhoto-lg {
+    transform: scale(1.5);
+    position: fixed;
+    top:25%;
+    left:43%;
+    z-index: 200;
+}
+
+
+.expandPhoto-mid {
+    transform: scale(1.2);
+    position: fixed;
+    top:25%;
+    left:30%;
+    z-index: 200;
+}
+
+
+
+
+
+/* media queries */
+
+/* switch to row */
+@media screen and (min-width: 762px) { 
+    
+  .photos {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .photo {
+      margin:10px;
+  }
+}
+
+
+
+/* decrease width of container, only want 3 max in row */
+@media screen and (min-width:1480px) {
+    
+    .photos {
+        /* margin:0; */
+        max-width: 77%;
+    }
+}
+
+
+
+
